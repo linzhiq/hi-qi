@@ -19,9 +19,29 @@ body {
   background: black;
 }
 
-* {
+.heading {
+  margin-left: 0.8em;
+  position: absolute;
+
+  bottom: 60vh;
+  width: 85px;
+}
+
+.content {
+  margin-left: 3em;
+  position: absolute;
+
+  top: 40vh;
+  width: 80vw;
+
+  max-width: 50em;
+}
+
+h2, a {
+  line-height: 140%;
+
   font-family: "DIN Neuzeit Grotesk Light", "Harmonia Sans Pro Cyr",
-    Avenir, sans-serif;
+  Avenir, sans-serif;
 
   color: white;
 }
@@ -29,10 +49,6 @@ body {
 a {
   text-decoration: none;
   border-bottom: white dotted;
-}
-
-h2 {
-  line-height: 140%;
 }
 
 .time.current {

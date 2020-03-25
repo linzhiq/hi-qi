@@ -4,30 +4,32 @@
     <title></title>
   </head>
   <body>
-    <img src="phone.svg" alt="Phone">
-    <h2>
-      Hi this is <a href="//qlz.io">Qi</a>. Currently in Philadelphia
-      <span class="time current"></span>
-      practicing social distancing.
-    </h2>
-    <h2>
-      Being alone sucks.
-      Friends, acquaintances, strangers, let’s hop on a video
-      call!
-    </h2>
-
-    <h2>
-      According to my calendar, I’m
-      <span class="availability"></span>
-      at the moment
-      <span class="slot free" hidden>
-        and will be free till <span class="time end"></span>.
+    <img class="heading" src="phone.svg" alt="Phone">
+    <div class="content">
+      <h2>
+        Hi this is <a href="//qlz.io">Qi</a>. Currently in Philadelphia
+        <span class="time current"></span>
+        practicing social distancing.
+      </h2>
+      <h2>
+        Being alone sucks.
+        Friends, acquaintances, strangers, let’s hop on a video
+        call!
+      </h2>
+  
+      <h2>
+        According to my calendar, I’m
+        <span class="availability"></span>
+        right now
+        <span class="slot free" hidden>
+        till <span class="time end"></span>.
       </span>
-      <span class="slot busy" hidden>
+        <span class="slot busy" hidden> at the moment
         , but I'll be free at <span class="time start"></span>
         till <span class="time end"></span>.
       </span>
-    </h2>
-    <script src="./index.js"></script>
+      </h2>
+      <script src="./index.js"></script>
+    </div>
   </body>
 </html>
