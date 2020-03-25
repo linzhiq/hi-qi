@@ -16,6 +16,15 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: white dotted;
+}
+
+h2 {
+  line-height: 140%;
+}
+
 .framed.outline {
   padding: 2px 3px;
   border: white solid 2px;
