@@ -1,3 +1,11 @@
-* {
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=68409eca-5a97-43d1-ac63-c34991ad4ba7");
 
+@font-face {
+  font-family: "DIN_30640 W00 Neuzeit GroteskBd";
+  src: url("fonts/c0165071-8461-44f6-b3b1-d75b601f3e47.woff2") format("woff2"),
+  url("fonts/1d5229a5-7132-4199-a01a-1e3efbee98ba.woff") format("woff");
+}
+
+* {
+  font-family: "DIN_30640 W00 Neuzeit GroteskBd", "Harmonia Sans Pro Cyr", Avenir, sans-serif;
 }
