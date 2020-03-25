@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Being alone sucks. Friends, acquaintances, strangers, let’s hop on a video call!",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "parcel index.html",
+    "watch": "parcel watch index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   },
   "repository": {
     "type": "git",
