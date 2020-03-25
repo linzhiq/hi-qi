@@ -6,6 +6,17 @@
   url("fonts/1d5229a5-7132-4199-a01a-1e3efbee98ba.woff") format("woff");
 }
 
+body {
+  background: black;
+}
+
 * {
   font-family: "DIN_30640 W00 Neuzeit GroteskBd", "Harmonia Sans Pro Cyr", Avenir, sans-serif;
+
+  color: white;
+}
+
+.framed.outline {
+  padding: 2px 3px;
+  border: white solid 2px;
 }
