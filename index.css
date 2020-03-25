@@ -35,9 +35,9 @@ h2 {
   line-height: 140%;
 }
 
-.time {
+.time.current {
   padding: 2px 6px;
-  border: #AAAAAA solid 2px;
+  border: darkgray solid 2px;
 }
 
 .time .timezone {
@@ -59,4 +59,24 @@ h2 {
 
 .time .colon.hidden {
   opacity: 0;
+}
+
+.availability::after {
+  text-transform: uppercase;
+
+  font-family: "DIN Neuzeit Grotesk Bold", "Harmonia Sans Pro Cyr",
+  Avenir, sans-serif;
+  font-size: 80%;
+
+  padding: 4px 8px;
+}
+
+.availability[data-available="true"]::after {
+  content: "Available";
+  background: green;
+}
+
+.availability[data-available="false"]::after {
+  content: "Unvailable";
+  background: red;
 }
