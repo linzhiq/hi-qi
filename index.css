@@ -35,7 +35,28 @@ h2 {
   line-height: 140%;
 }
 
+.time .timezone {
+  font-family: "DIN Neuzeit Grotesk Bold Condensed", "Harmonia Sans Pro Cyr",
+  Avenir, sans-serif;
+
+  vertical-align: super;
+  font-size: 60%;
+
+  padding-left: 5px;
+}
+
+.time .colon {
+  padding: 0 2px;
+
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+.time .colon.hidden {
+  opacity: 0;
+}
+
 .framed.outline {
-  padding: 2px 3px;
-  border: white solid 2px;
+  padding: 2px 6px;
+  border: #AAAAAA solid 2px;
 }
