@@ -1,9 +1,18 @@
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=68409eca-5a97-43d1-ac63-c34991ad4ba7");
-
 @font-face {
-  font-family: "DIN_30640 W00 Neuzeit GroteskBd";
-  src: url("fonts/c0165071-8461-44f6-b3b1-d75b601f3e47.woff2") format("woff2"),
-  url("fonts/1d5229a5-7132-4199-a01a-1e3efbee98ba.woff") format("woff");
+  font-family: "DIN Neuzeit Grotesk Light";
+  src: url("Fonts/b788f3ca-1b36-4360-86c0-36a00f1b8622.woff2") format("woff2"),
+    url("Fonts/b0720bb1-3a89-4c2b-82ee-0c3d59ca36d7.woff") format("woff");
+}
+@font-face {
+  font-family: "DIN Neuzeit Grotesk Bold";
+  src: url("Fonts/c0165071-8461-44f6-b3b1-d75b601f3e47.woff2") format("woff2"),
+    url("Fonts/1d5229a5-7132-4199-a01a-1e3efbee98ba.woff") format("woff");
+}
+@font-face {
+  font-family: "DIN Neuzeit Grotesk Bold Condensed";
+  src: url("Fonts/4b5af983-e22c-4188-9590-6f682badc7d6.woff2") format("woff2"),
+    url("Fonts/0200631b-5193-4794-9961-6996463ecc46.woff") format("woff");
 }
 
 body {
@@ -11,7 +20,8 @@ body {
 }
 
 * {
-  font-family: "DIN_30640 W00 Neuzeit GroteskBd", "Harmonia Sans Pro Cyr", Avenir, sans-serif;
+  font-family: "DIN Neuzeit Grotesk Light", "Harmonia Sans Pro Cyr",
+    Avenir, sans-serif;
 
   color: white;
 }
