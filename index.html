@@ -5,12 +5,25 @@
   <body>
     <h2>
       Hi this is <a href="//qlz.io">Qi</a>. Currently in Philadelphia
-      <span class="framed outline time" id="current">9:30pm</span>
+      <span class="time current"></span>
       practicing social distancing.
     </h2>
     <h2>
-      Being alone sucks.
-      Friends, acquaintances, strangers, let’s hop on a video call!
+      Being alone sucks. Friends, acquaintances, strangers, let’s hop on a video
+      call!
+    </h2>
+
+    <h2>
+      According to my calendar, I’m
+      <span class="availability" data-available="true"></span>
+      at the moment
+      <span class="slot free" hidden>
+        and I'll be free till <span class="time end"></span>
+      </span>
+      <span class="slot busy" hidden>
+        , but I'll be free at <span class="time start"></span>
+        till <span class="time end"></span>
+      </span>
     </h2>
     <script src="./index.js"></script>
   </body>

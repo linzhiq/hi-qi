@@ -38,7 +38,7 @@ const setTime = ($time, time, flash = false) => {
 
 const getCurrentTimeInET = () => moment().tz("America/New_York");
 
-const $currentTime = $(".time#current");
+const $currentTime = $(".time.current");
 
 initTime($currentTime, getCurrentTimeInET());
 
