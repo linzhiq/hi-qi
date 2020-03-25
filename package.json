@@ -6,6 +6,9 @@
     "run": "parcel build index.html",
     "watch": "parcel index.html"
   },
+  "dependencies": {
+    "moment-timezone": "^0.5.28"
+  },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
   },
