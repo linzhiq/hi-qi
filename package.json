@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Being alone sucks. Friends, acquaintances, strangers, let’s hop on a video call!",
   "scripts": {
-    "run": "parcel index.html",
-    "watch": "parcel watch index.html"
+    "run": "parcel build index.html",
+    "watch": "parcel index.html"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
