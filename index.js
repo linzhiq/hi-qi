@@ -97,6 +97,6 @@ updateAvailability();
 
 setTimeout(() => {
   setInterval(() => {
-    setTime($currentTime, getCurrentTimeInET(), true);
+    updateAvailability();
   }, 1000 * 60); // Check calendar again every minute
-}, Math.min(0, 1000 * (60 - moment().second() + 1))); // align intervals to exact minutes and give a one-second buffer
+}, Math.max(0, 1000 * (60 - moment().second() + 1))); // align intervals to exact minutes and give a one-second buffer
