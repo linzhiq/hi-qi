@@ -8,6 +8,16 @@ app.get('/', (req, res) => {
   res.send(`Hello ${target}!`);
 });
 
+app.get('/cal', (req, res) => {
+  res.json({
+    available: false,
+    slot: {
+      start: 1585195804000,
+      end: 1585196804000
+    }
+  })
+});
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log('Hello world listening on port', port);

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "build": "gcloud builds submit --tag gcr.io/hi-qlz-io/cal",
-    "deploy": "gcloud run deploy --image gcr.io/hi-qlz-io/cal --platform managed"
+    "deploy": "gcloud run deploy cal --image gcr.io/hi-qlz-io/cal --platform managed --allow-unauthenticated",
+    "update": "npm run build && npm run deploy"
   },
   "dependencies": {
     "express": "^4.17.1"
