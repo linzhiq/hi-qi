@@ -1,20 +1,25 @@
 const $ = require("jquery");
 const moment = require("moment-timezone");
 
-const getAvailability = () => {
+const getAvailability = callback => {
   // return {
   //   available: true,
   //   slot: {
   //     end: moment.tz([2020, 3, 25, 18, 0, 0, 0], 0).unix() * 1000
   //   }
   // };
-  return {
-    available: false,
-    slot: {
-      start: moment.tz([2020, 3, 26, 2, 0, 0, 0], 0).unix() * 1000,
-      end: moment.tz([2020, 3, 26, 3, 30, 0, 0], 0).unix() * 1000
-    }
-  };
+
+  $.get("/cal", data => {
+    callback(data);
+  });
+
+  // return {
+  //   available: false,
+  //   slot: {
+  //     start: moment.tz([2020, 3, 26, 2, 0, 0, 0], 0).unix() * 1000,
+  //     end: moment.tz([2020, 3, 26, 3, 30, 0, 0], 0).unix() * 1000
+  //   }
+  // };
 };
 
 const initTime = ($time, time) => {
@@ -59,36 +64,36 @@ const $timeEnd = $(".time.end");
 
 const updateAvailability = () => {
   const $availability = $(".availability");
-  const availability = getAvailability();
-
-  const $slotFree = $(".slot.free");
-  const $slotBusy = $(".slot.busy");
-
-  if (availability.available) {
-    $availability.attr("data-available", "true");
-
-    $slotBusy.hide();
-    $slotFree.show();
-
-    setTime(
-      $timeEnd,
-      moment.tz(availability.slot.end, 0).tz(moment.tz.guess())
-    );
-  } else {
-    $availability.attr("data-available", "false");
-
-    $slotBusy.show();
-    $slotFree.hide();
+  getAvailability(availability => {
+    const $slotFree = $(".slot.free");
+    const $slotBusy = $(".slot.busy");
   
-    setTime(
-      $timeStart,
-      moment.tz(availability.slot.start, 0).tz(moment.tz.guess())
-    );
-    setTime(
-      $timeEnd,
-      moment.tz(availability.slot.end, 0).tz(moment.tz.guess())
-    );
-  }
+    if (availability.available) {
+      $availability.attr("data-available", "true");
+    
+      $slotBusy.hide();
+      $slotFree.show();
+    
+      setTime(
+        $timeEnd,
+        moment.tz(availability.slot.end, 0).tz(moment.tz.guess())
+      );
+    } else {
+      $availability.attr("data-available", "false");
+    
+      $slotBusy.show();
+      $slotFree.hide();
+    
+      setTime(
+        $timeStart,
+        moment.tz(availability.slot.start, 0).tz(moment.tz.guess())
+      );
+      setTime(
+        $timeEnd,
+        moment.tz(availability.slot.end, 0).tz(moment.tz.guess())
+      );
+    }
+  });
 };
 
 const getCurrentTimeInET = () => moment().tz("America/New_York");

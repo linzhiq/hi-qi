@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Being alone sucks. Friends, acquaintances, strangers, let’s hop on a video call!",
   "scripts": {
-    "run": "parcel build index.html",
+    "build": "parcel build index.html",
     "watch": "parcel index.html",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "serve": "firebase serve",
+    "update": "npm run build && npm run deploy",
+    "debug": "npm run build && npm run serve"
   },
   "dependencies": {
     "moment-timezone": "^0.5.28",
