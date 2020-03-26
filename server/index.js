@@ -30,7 +30,7 @@ app.get("/cal", (req, res) => {
     const calendars = listData.data.items.filter(cal => cal.selected);
     const calendarIds = calendars.map(cal => cal.id)
     
-    const buffer = 15; // Show as unavailable 15 minutes after events
+    const buffer = 10; // Show as unavailable 10 minutes after events
     const now = moment();
     const queryStart = moment(now).subtract(0, "minute");
     const queryEnd = moment(now).add(2, "day");
