@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "build": "gcloud builds submit --tag gcr.io/hi-qlz-io/helloworld",
+    "deploy": "gcloud run deploy --image gcr.io/hi-qlz-io/helloworld --platform managed"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   },
   "author": "",
   "license": "ISC"
