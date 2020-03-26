@@ -35,7 +35,7 @@ body {
 
 h2,
 a {
-  line-height: 36px;
+  line-height: 145%;
 
   font-family: "DIN Neuzeit Grotesk Light", "Harmonia Sans Pro Cyr", Avenir,
     sans-serif;
@@ -108,5 +108,27 @@ h2 a {
 .action {
   margin-top: 4em;
 
-  margin-bottom: 8em;
+  margin-bottom: 6em;
+}
+
+@media screen and (max-width: 420px) {
+  .heading {
+    margin-left: 0.8em;
+    width: 68px;
+    bottom: 65vh;
+  }
+
+  .content {
+    margin-left: 3em;
+    font-size: 80%;
+    top: 35vh;
+  }
+
+  h2 {
+    line-height: 160%;
+  }
+
+  .action {
+    margin-bottom: 2.5em;
+  }
 }
