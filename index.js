@@ -2,24 +2,9 @@ const $ = require("jquery");
 const moment = require("moment-timezone");
 
 const getAvailability = callback => {
-  // return {
-  //   available: true,
-  //   slot: {
-  //     end: moment.tz([2020, 3, 25, 18, 0, 0, 0], 0).unix() * 1000
-  //   }
-  // };
-
   $.get("/cal", data => {
     callback(data);
   });
-
-  // return {
-  //   available: false,
-  //   slot: {
-  //     start: moment.tz([2020, 3, 26, 2, 0, 0, 0], 0).unix() * 1000,
-  //     end: moment.tz([2020, 3, 26, 3, 30, 0, 0], 0).unix() * 1000
-  //   }
-  // };
 };
 
 const initTime = ($time, time) => {

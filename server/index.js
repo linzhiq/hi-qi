@@ -32,7 +32,7 @@ app.get("/cal", (req, res) => {
     
     const buffer = 15; // Show as unavailable 15 minutes after events
     const now = moment();
-    const queryStart = moment(now).subtract(buffer, "minute");
+    const queryStart = moment(now).subtract(0, "minute");
     const queryEnd = moment(now).add(2, "day");
 
     calendar.freebusy.query(
@@ -58,7 +58,7 @@ app.get("/cal", (req, res) => {
         let [freeEnd] = [queryEnd];
         
         for (let slot of combinedBusy) {
-          let [start, end] = [moment(slot.start), moment(slot.end)];
+          let [start, end] = [moment(slot.start), moment(slot.end).add(buffer, "minute")];
           
           if (start < busyUntil && end > busyUntil) {
             // Currently busy or extending busy slot
