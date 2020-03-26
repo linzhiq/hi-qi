@@ -11,6 +11,13 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "redirects": [
+      {
+        "source": "/hi-qi",
+        "destination": "https://whereby.com/hi-qi",
+        "type": 302
+      }
     ]
   }
 }
