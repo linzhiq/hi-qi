@@ -5,11 +5,6 @@
     url("Fonts/b0720bb1-3a89-4c2b-82ee-0c3d59ca36d7.woff") format("woff");
 }
 @font-face {
-  font-family: "DIN Neuzeit Grotesk Bold";
-  src: url("Fonts/c0165071-8461-44f6-b3b1-d75b601f3e47.woff2") format("woff2"),
-    url("Fonts/1d5229a5-7132-4199-a01a-1e3efbee98ba.woff") format("woff");
-}
-@font-face {
   font-family: "DIN Neuzeit Grotesk Bold Condensed";
   src: url("Fonts/4b5af983-e22c-4188-9590-6f682badc7d6.woff2") format("woff2"),
     url("Fonts/0200631b-5193-4794-9961-6996463ecc46.woff") format("woff");
@@ -20,7 +15,7 @@ body {
 }
 
 .heading {
-  margin-left: 0.8em;
+  margin-left: 1.8em;
   position: absolute;
 
   bottom: 60vh;
@@ -28,27 +23,40 @@ body {
 }
 
 .content {
-  margin-left: 3em;
+  margin-left: 4em;
   position: absolute;
 
   top: 40vh;
   width: 80vw;
 
-  max-width: 50em;
+  max-width: 48em;
 }
 
-h2, a {
+h2,
+a {
   line-height: 140%;
 
-  font-family: "DIN Neuzeit Grotesk Light", "Harmonia Sans Pro Cyr",
-  Avenir, sans-serif;
+  font-family: "DIN Neuzeit Grotesk Light", "Harmonia Sans Pro Cyr", Avenir,
+    sans-serif;
 
   color: white;
 }
 
-a {
+h2 img {
+  width: 28px;
+
+  margin-left: -6px;
+  padding-right: 6px;
+
+  transform: translateY(6px);
+}
+
+h2 a {
   text-decoration: none;
   border-bottom: white dotted;
+
+  margin: 0 -3px;
+  padding: 0 3px;
 }
 
 .time.current {
@@ -58,7 +66,7 @@ a {
 
 .time .timezone {
   font-family: "DIN Neuzeit Grotesk Bold Condensed", "Harmonia Sans Pro Cyr",
-  Avenir, sans-serif;
+    Avenir, sans-serif;
 
   vertical-align: super;
   font-size: 60%;
@@ -78,21 +86,22 @@ a {
 }
 
 .availability::after {
-  text-transform: uppercase;
-
-  font-family: "DIN Neuzeit Grotesk Bold", "Harmonia Sans Pro Cyr",
-  Avenir, sans-serif;
-  font-size: 80%;
-
-  padding: 4px 8px;
+  color: black;
+  padding: 4px 6px;
 }
 
 .availability[data-available="true"]::after {
-  content: "Available";
-  background: green;
+  content: "available";
+  background: #27ff00;
 }
 
 .availability[data-available="false"]::after {
-  content: "Unvailable";
-  background: red;
+  content: "unavailable";
+  background: #ff4c00;
+}
+
+.action {
+  margin-top: 4em;
+
+  margin-bottom: 8em;
 }
