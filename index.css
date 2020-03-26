@@ -115,13 +115,13 @@ h2 a {
   .heading {
     margin-left: 0.8em;
     width: 68px;
-    bottom: 65vh;
+    bottom: 65%;
   }
 
   .content {
     margin-left: 3em;
     font-size: 80%;
-    top: 35vh;
+    top: 35%;
   }
 
   h2 {
@@ -129,6 +129,6 @@ h2 a {
   }
 
   .action {
-    margin-bottom: 2.5em;
+    margin-bottom: 3em;
   }
 }
