@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cal", (req, res) => {
-  res.set('Cache-Control', 'no-cache');
+  res.set('Cache-Control', 'no-cache, public, max-age=0, s-maxage=0');
   
   calendar.calendarList.list((err, listData) => {
     const calendars = listData.data.items.filter(cal => cal.selected);
