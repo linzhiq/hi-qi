@@ -8,6 +8,13 @@
     ],
     "rewrites": [
       {
+        "source": "/cal",
+        "run": {
+          "serviceId": "cal",
+          "region": "us-central1"
+        }
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "gcloud builds submit --tag gcr.io/hi-qlz-io/helloworld",
-    "deploy": "gcloud run deploy --image gcr.io/hi-qlz-io/helloworld --platform managed"
+    "build": "gcloud builds submit --tag gcr.io/hi-qlz-io/cal",
+    "deploy": "gcloud run deploy --image gcr.io/hi-qlz-io/cal --platform managed"
   },
   "dependencies": {
     "express": "^4.17.1"

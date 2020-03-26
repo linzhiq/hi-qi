@@ -4,14 +4,16 @@
   "description": "Being alone sucks. Friends, acquaintances, strangers, let’s hop on a video call!",
   "scripts": {
     "run": "parcel build index.html",
-    "watch": "parcel index.html"
+    "watch": "parcel index.html",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "moment-timezone": "^0.5.28",
     "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "firebase-tools": "^7.16.1"
   },
   "repository": {
     "type": "git",
